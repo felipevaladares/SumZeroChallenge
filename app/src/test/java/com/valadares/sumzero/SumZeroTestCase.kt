@@ -12,7 +12,10 @@ class SumZeroTestCase {
     @Test
     fun addition_isCorrect() {
 
-        var result = listOf(1,2).sumZero()
+        var result = listOf<Int>().sumZero()
+        assertNull(result)
+
+        result = listOf(1,2).sumZero()
         assertNull(result)
 
         result = listOf(1,2,4,7).sumZero()
