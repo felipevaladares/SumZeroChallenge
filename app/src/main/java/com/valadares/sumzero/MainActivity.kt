@@ -15,30 +15,32 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showSamples() {
+        var numbersList = listOf<Int>()
         val stringBuilder = StringBuilder()
-        stringBuilder.append("Input: lista vazia / ")
-        stringBuilder.append("Retorno:" + listOf<Int>().sumZero().toString())
-        stringBuilder.append(LINE_BREAK)
 
-        stringBuilder.append("Input: 1, 2 / ")
-        stringBuilder.append("Resultado:" + listOf(1, 2).sumZero().toString())
-        stringBuilder.append(LINE_BREAK)
+        stringBuilder.append(getInputString(numbersList))
+        stringBuilder.append(getResultString(numbersList))
 
-        stringBuilder.append("Input: 1, 2, 4, 7 / ")
-        stringBuilder.append("Resultado:" + listOf(1, 2, 4, 7).sumZero().toString())
-        stringBuilder.append(LINE_BREAK)
+        numbersList = listOf(1, 2)
+        stringBuilder.append(getInputString(numbersList))
+        stringBuilder.append(getResultString(numbersList))
 
-        stringBuilder.append("Input: -4, -3, -2, 1, 2, 3, 5 / ")
-        stringBuilder.append("Resultado:" + listOf(-4, -3, -2, 1, 2, 3, 5).sumZero().toString())
-        stringBuilder.append(LINE_BREAK)
+        numbersList = listOf(1, 2, 4, 7)
+        stringBuilder.append(getInputString(numbersList))
+        stringBuilder.append(getResultString(numbersList))
 
-        stringBuilder.append("Input: -4, -3, -2, 1, 2, 5 / ")
-        stringBuilder.append("Resultado:" + listOf(-4, -3, -2, 1, 2, 5).sumZero().toString())
+        numbersList = listOf(-4, -3, -2, 1, 2, 3, 5)
+        stringBuilder.append(getInputString(numbersList))
+        stringBuilder.append(getResultString(numbersList))
+
+        numbersList = listOf(-4, -3, -2, 1, 2, 5)
+        stringBuilder.append(getInputString(numbersList))
+        stringBuilder.append(getResultString(numbersList))
 
         textViewResults.text = stringBuilder
     }
 
-    companion object {
-        const val LINE_BREAK = "\n"
-    }
+    private fun getInputString(numbersList: List<Int>) = getString(R.string.input, numbersList)
+
+    private fun getResultString(numbersList: List<Int>) = getString(R.string.result, numbersList.sumZero())
 }
