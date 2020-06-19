@@ -2,6 +2,6 @@
     <string name="app_name">SumZero Challenge</string>
 
 
-    <string name="input">Input: %s </string>
-    <string name="result"> -  Resultado: %s \n</string>
+    <string name="input">Input: %s - \ </string>
+    <string name="result">Resultado: %s \n</string>
 </resources>

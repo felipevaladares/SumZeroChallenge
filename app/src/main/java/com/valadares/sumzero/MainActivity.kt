@@ -29,11 +29,11 @@ class MainActivity : AppCompatActivity() {
         stringBuilder.append(getInputString(numbersList))
         stringBuilder.append(getResultString(numbersList))
 
-        numbersList = listOf(-4, -3, -2, 1, 2, 3, 5)
+        numbersList = listOf(-4, -3, -2, 1, 2, 5)
         stringBuilder.append(getInputString(numbersList))
         stringBuilder.append(getResultString(numbersList))
 
-        numbersList = listOf(-4, -3, -2, 1, 2, 5)
+        numbersList = listOf(-4, -3, -2, 1, 2, 3, 5)
         stringBuilder.append(getInputString(numbersList))
         stringBuilder.append(getResultString(numbersList))
 
